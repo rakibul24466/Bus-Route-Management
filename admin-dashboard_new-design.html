@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Shohoz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="bg-gray-800 text-white w-64 min-h-screen p-4">
+            <nav>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">
+                            Manage Buses
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">
+                            Manage Routes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">
+                            Manage Bookings
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">
+                            Statistics
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+            <h1 class="text-2xl font-semibold text-gray-900">Admin Dashboard</h1>
+
+            <!-- Statistics Cards -->
+            <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="p-5">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-green-500 rounded-md p-3">
+                                <i class="fas fa-ticket-alt fa-2x text-white"></i>
+                            </div>
+                            <div class="ml-5 w-0 flex-1">
+                                <dl>
+                                    <dt class="text-sm font-medium text-gray-500 truncate">
+                                        Total Tickets Sold
+                                    </dt>
+                                    <dd class="text-3xl font-semibold text-gray-900">
+                                        12,345
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="p-5">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                <i class="fas fa-bus fa-2x text-white"></i>
+                            </div>
+                            <div class="ml-5 w-0 flex-1">
+                                <dl>
+                                    <dt class="text-sm font-medium text-gray-500 truncate">
+                                        Active Buses
+                                    </dt>
+                                    <dd class="text-3xl font-semibold text-gray-900">
+                                        50
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="p-5">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-yellow-500 rounded-md p-3">
+                                <i class="fas fa-route fa-2x text-white"></i>
+                            </div>
+                            <div class="ml-5 w-0 flex-1">
+                                <dl>
+                                    <dt class="text-sm font-medium text-gray-500 truncate">
+                                        Total Routes
+                                    </dt>
+                                    <dd class="text-3xl font-semibold text-gray-900">
+                                        25
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manage Buses Section -->
+            <div class="mt-8">
+                <h2 class="text-lg font-semibold text-gray-900">Manage Buses</h2>
+                <div class="mt-4 bg-white shadow overflow-hidden sm:rounded-md">
+                    <ul class="divide-y divide-gray-200">
+                        <li>
+                            <div class="px-4 py-4 sm:px-6">
+                                <div class="flex items-center justify-between">
+                                    <p class="text-sm font-medium text-green-600 truncate">
+                                        Bus 001 - Dhaka Express
+                                    </p>
+                                    <div class="ml-2 flex-shrink-0 flex">
+                                        <button class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                            Edit
+                                        </button>
+                                        <button class="ml-2 px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
+                                            Remove
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-2 sm:flex sm:justify-between">
+                                    <div class="sm:flex">
+                                        <p class="flex items-center text-sm text-gray-500">
+                                            <i class="fas fa-chair flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"></i>
+                                            40 seats
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- More bus items... -->
+                    </ul>
+                </div>
+                <button class="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+                    Add New Bus
+                </button>
+            </div>
+
+            <!-- Manage Routes Section -->
+            <div class="mt-8">
+                <h2 class="text-lg font-semibold text-gray-900">Manage Routes</h2>
+                <div class="mt-4 bg-white shadow overflow-hidden sm:rounded-md">
+                    <ul class="divide-y divide-gray-200">
+                        <li>
+                            <div class="px-4 py-4 sm:px-6">
+                                <div class="flex items-center justify-between">
+                                    <p class="text-sm font-medium text-green-600 truncate">
+                                        Dhaka to Chittagong
+                                    </p>
+                                    <div class="ml-2 flex-shrink-0 flex">
+                                        <button class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                            Edit
+                                        </button>
+                                        <button class="ml-2 px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
+                                            Remove
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-2 sm:flex sm:justify-between">
+                                    <div class="sm:flex">
+                                        <p class="flex items-center text-sm text-gray-500">
+                                            <i class="fas fa-clock flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"></i>
+                                            6 hours
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- More route items... -->
+                    </ul>
+                </div>
+                <button class="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+                    Add New Route
+                </button>
+            </div>
+
+            <!-- Manage Bookings Section -->
+            <div class="mt-8">
+                <h2 class="text-lg font-semibold text-gray-900">Manage Bookings</h2>
+                <div class="mt-4 bg-white shadow overflow-hidden sm:rounded-md">
+                    <ul class="divide-y divide-gray-200">
+                        <li>
+                            <div class="px-4 py-4 sm:px-6">
+                                <div class="flex items-center justify-between">
+                                    <p class="text-sm font-medium text-green-600 truncate">
+                                        Booking #12345 - John Doe
+                                    </p>
+                                    <div class="ml-2 flex-shrink-0 flex">
+                                        <button class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                                            Edit
+                                        </button>
+                                        <button class="ml-2 px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
+                                            Cancel
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mt-2 sm:flex sm:justify-between">
+                                    <div class="sm:flex">
+                                        <p class="flex items-center text-sm text-gray-500">
+                                            <i class="fas fa-calendar flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"></i>
+                                            22 Nov 2024
+                                        </p>
+                                        <p class="mt-2 flex items-center text-sm text-gray-500 sm:mt-0 sm:ml-6">
+                                            <i class="fas fa-bus flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"></i>
+                                            Dhaka Express
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- More booking items... -->
+                    </ul>
+                </div>
+                <button class="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+                    Add New Booking
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // You can add JavaScript here for interactivity
+    </script>
+</body>
+</html>
