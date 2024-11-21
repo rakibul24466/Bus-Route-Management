@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Ticket - Shohoz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="images/logo.png" alt="Shohoz Logo" class="h-8">
+            </a>
+            <nav class="hidden md:flex space-x-4">
+                <a href="#" class="text-green-600 hover:text-green-800">Home</a>
+                <a href="#" class="text-green-600 hover:text-green-800">Routes</a>
+                <a href="#" class="text-green-600 hover:text-green-800">Verify Ticket</a>
+                <a href="#" class="text-green-600 hover:text-green-800">About us</a>
+                <a href="#" class="text-green-600 hover:text-green-800">Contact us</a>
+            </nav>
+            <a href="tel:12345" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded">12345</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-8 px-4">
+        <div class="max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-md">
+            <div class="px-6 py-8">
+                <h2 class="text-2xl font-bold text-center text-gray-700 mb-8">Verify Your Ticket</h2>
+                <form action="#" method="POST">
+                    <div class="mb-4">
+                        <label for="ticket-number" class="block text-gray-700 text-sm font-bold mb-2">Ticket Number</label>
+                        <input type="text" id="ticket-number" name="ticket-number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full">
+                            Verify Ticket
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Shohoz. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

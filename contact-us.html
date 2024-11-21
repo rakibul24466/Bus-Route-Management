@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - HelloBus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white">
+    <!-- Header -->
+    <header class="border-b">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="/" class="flex items-center">
+                <img src="images/logo.png" alt="Website Logo" class="h-8">
+            </a>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#" class="flex items-center text-green-600 hover:text-green-700">
+                    <span class="mr-2">Home</span>
+                </a>
+                <a href="#" class="flex items-center text-gray-600 hover:text-gray-700">
+                    <span class="mr-2">Routes</span>
+                </a>
+                <a href="#" class="flex items-center text-gray-600 hover:text-gray-700">
+                    <span class="mr-2">Verify Ticket</span>
+                </a>
+                <a href="#" class="flex items-center text-gray-600 hover:text-gray-700">
+                    <span class="mr-2">About us</span>
+                </a>
+                <a href="#" class="flex items-center text-gray-600 hover:text-gray-700">
+                    <span class="mr-2">Contact us</span>
+                </a>
+
+            </nav>
+            <a href="tel:16374" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
+                12345
+            </a>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="bg-green-600 text-white">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center space-x-2">
+                <a href="/" class="hover:underline">Home</a>
+                <span>›</span>
+                <span>Contact Us</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-2xl mx-auto">
+            <h1 class="text-3xl font-bold text-center mb-2">Contact Us</h1>
+            <p class="text-center text-gray-600 mb-8">Thank you for reaching us! We are always happy to hear from you
+            </p>
+
+            <form action="process-contact.php" method="POST" class="space-y-6">
+                <div>
+                    <label for="purpose" class="block text-sm font-medium text-gray-700 mb-1">Purpose</label>
+                    <select id="purpose" name="purpose" required
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-green-500">
+                        <option value="bus">Bus</option>
+                        <option value="air">Schedule Miss</option>
+                        <option value="train">Bad Service</option>
+                        <option value="launch">Seat Issue</option>
+                        <option value="event">Unexpected Delay</option>
+                        <option value="park">Others</option>
+                    </select>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name <span
+                                class="text-red-500">*</span></label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-green-500">
+                    </div>
+
+                    <div>
+                        <label for="city" class="block text-sm font-medium text-gray-700 mb-1">Your City <span
+                                class="text-red-500">*</span></label>
+                        <select id="city" name="city" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-green-500">
+                            <option value="dhaka">Dhaka</option>
+                            <option value="chittagong">Chittagong</option>
+                            <option value="sylhet">Sylhet</option>
+                            <option value="rajshahi">Rajshahi</option>
+                            <option value="khulna">Khulna</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number <span
+                                class="text-red-500">*</span></label>
+                        <input type="tel" id="phone" name="phone" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-green-500">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email <span
+                                class="text-red-500">*</span></label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-green-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message <span
+                            class="text-red-500">*</span></label>
+                    <textarea id="message" name="message" rows="6" required
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-green-500"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit"
+                        class="px-6 py-2 bg-[#98D8AA] text-white rounded-md hover:bg-[#85c596] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                        Send
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 mt-12">
+        <div class="container mx-auto px-4 py-8">
+            <p class="text-center text-gray-600">&copy;
+                <?php echo date('Y'); ?> Rakibul Hasan. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

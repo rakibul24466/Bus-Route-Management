@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles can be added here if needed */
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <header class="bg-cover bg-center text-white p-6" style="background-image: url('https://source.unsplash.com/1600x400/?bus,travel');">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-lg font-semibold">ONWARD</h1>
+            <p class="text-2xl">Dhaka To Chittagong On 22 Nov 2024</p>
+            <div class="flex flex-wrap justify-between mt-4">
+                <span>Total Buses Found: 290</span>
+                <span>Total Operators Found: 55</span>
+                <span>Total Seats Available: 8124</span>
+            </div>
+            <button class="mt-4 bg-white text-black px-4 py-2 rounded">Modify Search</button>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto mt-6 p-4">
+        <div class="flex flex-wrap justify-between items-center bg-white p-4 rounded-md shadow">
+            <div class="flex flex-wrap items-center gap-4">
+                <span class="font-semibold">SORT BY</span>
+                <span>DEPARTURE TIME</span>
+                <span>AVAILABLE SEATS</span>
+                <span>FARE</span>
+                <span>SPECIAL OFFERS</span>
+            </div>
+            <button class="mt-2 sm:mt-0 border border-gray-300 px-4 py-2 rounded">Filter By</button>
+        </div>
+
+        <div id="bus-list" class="mt-4 space-y-4">
+            <!-- Bus cards will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <script>
+        const busData = [
+            {
+                name: 'SAINTMARTIN EXPRESS PVT LTD',
+                route: '32-ABDP-CTG(A/C E)Ac',
+                start: 'Abdullahpur',
+                end: 'Dampara M.GATE',
+                departure: '5:00 AM',
+                arrival: '11:30 AM',
+                seats: 40,
+                fare: '৳900.00',
+            },
+            {
+                name: 'SHYAMOLI NR TRAVELS',
+                route: '102-CTGNon AC',
+                start: 'Gabtoli 06 No.',
+                end: 'CTG- BRTC-02',
+                departure: '5:30 AM',
+                arrival: '10:15 AM',
+                seats: 35,
+                fare: '৳650.00',
+            },
+            {
+                name: 'S.ALAM SERVICE',
+                route: '01-DHK-CTGNon AC',
+                start: 'Abdullahpur',
+                end: 'Dampara',
+                departure: '6:00 AM',
+                arrival: '12:00 PM',
+                seats: 36,
+                fare: '৳650.00',
+            },
+        ];
+
+        function createBusCard(bus) {
+            return `
+                <div class="bg-white shadow-md rounded-lg p-4">
+                    <div class="flex flex-wrap justify-between items-center">
+                        <div class="w-full sm:w-auto mb-4 sm:mb-0">
+                            <h2 class="text-lg font-semibold">${bus.name}</h2>
+                            <p>${bus.route}</p>
+                            <p>Starting Point: <span class="text-red-500">${bus.start}</span></p>
+                            <p>End Point: <span class="text-red-500">${bus.end}</span></p>
+                        </div>
+                        <div class="flex flex-wrap gap-4 sm:gap-8">
+                            <div>
+                                <p>DEPARTURE TIME</p>
+                                <p class="text-red-500">${bus.departure}</p>
+                            </div>
+                            <div>
+                                <p>ARRIVAL TIME</p>
+                                <p class="text-red-500">${bus.arrival}</p>
+                            </div>
+                            <div>
+                                <p>SEATS AVAILABLE</p>
+                                <p class="text-red-500">${bus.seats}</p>
+                            </div>
+                            <div>
+                                <p>No Additional Charge</p>
+                                <p class="text-red-500">${bus.fare}</p>
+                            </div>
+                        </div>
+                        <div class="w-full sm:w-auto mt-4 sm:mt-0 text-center">
+                            <button class="bg-red-500 text-white px-4 py-2 rounded">View Seats</button>
+                            <p class="text-sm text-red-500 mt-2">Cancellation Policy</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const busList = document.getElementById('bus-list');
+            busData.forEach(bus => {
+                busList.innerHTML += createBusCard(bus);
+            });
+        });
+    </script>
+</body>
+</html>
+
